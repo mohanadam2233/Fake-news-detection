@@ -44,21 +44,36 @@ Open `http://localhost:5173` (or the address shown in terminal).
 
 The frontend expects these endpoints (adjust `src/services/api.js` if your backend uses different paths):
 
-- `POST /auth/register` — create a user (body: `{ name, email, password }`)
-- `POST /auth/login` — login (body: `{ email, password }`) → returns `{ token, user }` (token stored in localStorage)
+
 - `POST /predict` — returns model predictions e.g.
 ```json
 {
+  "text": "This is a sample news text to check predictions...",
   "predictions": {
-    "NaiveBayes": "Fake (0.83)",
-    "LogisticRegression": "Real (0.43)",
-    "RandomForest": "Fake (0.91)"
-  },
-  "text": "..."
+    "NaiveBayes": {
+      "label": "Fake",
+      "confidence": 0.83,
+      "accuracy": 0.82,
+      "f1_score": 0.80
+    },
+    "LogisticRegression": {
+      "label": "Real",
+      "confidence": 0.43,
+      "accuracy": 0.85,
+      "f1_score": 0.84
+    },
+    "RandomForest": {
+      "label": "Fake",
+      "confidence": 0.91,
+      "accuracy": 0.90,
+      "f1_score": 0.89
+    }
+  }
 }
+
 ```
 
-If your backend returns different property names, update `src/services/api.js` and the `Dashboard.jsx` mapping accordingly.
+If your backend returns different property names, update `.env` and the `app.jsx` mapping accordingly.
 
 ## Notes & suggestions
 - For production, replace localStorage auth with secure HTTP-only cookies or other secure auth pattern.
