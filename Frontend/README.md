@@ -52,21 +52,21 @@ The frontend expects these endpoints (adjust `src/services/api.js` if your backe
   "predictions": {
     "NaiveBayes": {
       "label": "Fake",
-      "confidence": 0.83,
-      "accuracy": 0.82,
-      "f1_score": 0.80
+      "confidence": 0.93,
+      "accuracy": 0.91,
+      "f1_score": 0.90
     },
     "LogisticRegression": {
       "label": "Real",
-      "confidence": 0.43,
-      "accuracy": 0.85,
-      "f1_score": 0.84
+      "confidence": 0.98,
+      "accuracy": 0.98,
+      "f1_score": 0.98
     },
     "RandomForest": {
       "label": "Fake",
-      "confidence": 0.91,
-      "accuracy": 0.90,
-      "f1_score": 0.89
+      "confidence": 0.99,
+      "accuracy": 0.99,
+      "f1_score": 0.99
     }
   }
 }
