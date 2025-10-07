@@ -3,7 +3,6 @@
 This is a modern frontend interface for a Fake News Detection backend. It uses React + Vite + Tailwind CSS and connects to a Flask API that runs your machine learning models (Naive Bayes, Logistic Regression, Random Forest).
 
 ## Features
-- Sign Up / Sign In screens (simple auth using your backend)
 - Paste or type text and call `/predict`
 - Displays each model's result with clear icons and UI
 - Responsive layout and modern styling
