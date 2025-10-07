@@ -1,0 +1,44 @@
+# =======================
+# Python / Flask
+# =======================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+instance/
+*.pkl
+*.log
+
+# =======================
+# Node / React / Vite
+# =======================
+node_modules/
+dist/
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =======================
+# Environment variables
+# =======================
+.env
+.env.local
+.env.*.local
+
+# Ignore datasets
+Backend/Dataset/
+# =======================
+# IDE / Editor files
+# =======================
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
